@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript If/Else</title>
+</head>
+<body>
+
+    <h1>Check Age</h1>
+    <p>Enter your age:</p>
+    <input type="number" id="ageInput">
+    <button onclick="checkAge()">Check</button>
+
+    <script>
+        function checkAge() {
+            let age = document.getElementById("ageInput").value;
+            
+            if (age >= 18) {
+                alert("You are an adult.");
+            } else {
+                alert("You are not an adult.");
+            }
+        }
+    </script>
+
+</body>
+</html>
