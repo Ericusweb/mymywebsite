@@ -10,12 +10,18 @@
     <button onclick="greet()">Say Hello</button>
     <button onclick="showSquare(5)">Square of 5</button>
     <button onclick="showSum(3, 7)">Sum of 3 and 7</button>
+    <button onclick="showMultiplication()">Multiply 4 × 6</button>
+
 
     <script>
         // Basic function
         function greet() {
             alert("Hello, Eric!");
         }
+     function multiply(a, b) {
+      return a * b;
+       }
+
 
         // Function with 1 input (parameter)
         function showSquare(number) {
@@ -28,7 +34,11 @@
             let result = a + b;
             alert("The sum of " + a + " and " + b + " is " + result);
         }
-    </script>
+function showMultiplication() {
+    let result = multiply(4, 6);
+    alert("The result is: " + result);
+}
+ </script>
 
 </body>
 </html>
