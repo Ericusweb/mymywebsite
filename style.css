@@ -211,6 +211,22 @@ a {
 a:hover {
     color: #1f618d;
 }
+/* ==== Navigation Styling ==== */
+nav {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2980b9;
+}
 
 
 
