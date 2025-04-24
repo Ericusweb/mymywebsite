@@ -255,6 +255,16 @@ nav a:hover {
         margin: 5px 0;
     }
 }
+h3 {
+    margin-top: 30px;
+    color: #34495e;
+}
+
+ul li {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 10px;
+}
 
 
 
