@@ -23,8 +23,14 @@
                 return;
             }
 
-            let listItem = document.createElement("li");
-            listItem.textContent = taskText;
+           let listItem = document.createElement("li");
+listItem.textContent = taskText;
+
+// Mark as done when clicked
+listItem.onclick = function () {
+    listItem.classList.toggle("done");
+};
+;
 
             // Add a delete button
             let deleteBtn = document.createElement("button");
