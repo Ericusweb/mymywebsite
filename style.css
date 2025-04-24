@@ -61,4 +61,24 @@ button {
 button:hover {
     background-color: #004c99;
 }
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+a {
+    color: darkred;
+    text-decoration: none;
+}
 
