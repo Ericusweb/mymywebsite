@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions</title>
+</head>
+<body>
+
+    <h1>Function Practice</h1>
+
+    <button onclick="greet()">Say Hello</button>
+    <button onclick="showSquare(5)">Square of 5</button>
+    <button onclick="showSum(3, 7)">Sum of 3 and 7</button>
+
+    <script>
+        // Basic function
+        function greet() {
+            alert("Hello, Eric!");
+        }
+
+        // Function with 1 input (parameter)
+        function showSquare(number) {
+            let square = number * number;
+            alert("Square of " + number + " is " + square);
+        }
+
+        // Function with 2 inputs (parameters)
+        function showSum(a, b) {
+            let result = a + b;
+            alert("The sum of " + a + " and " + b + " is " + result);
+        }
+    </script>
+
+</body>
+</html>
