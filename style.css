@@ -166,6 +166,52 @@ li button {
     text-decoration: line-through;
     color: gray;
 }
+/* ==== Portfolio Styling ==== */
+body {
+    background-color: #f2f7ff;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #5d6d7e;
+    margin-top: 0;
+}
+
+img {
+    border-radius: 50%;
+    margin: 20px 0;
+    border: 3px solid #ccc;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1f618d;
+}
+
 
 
 
