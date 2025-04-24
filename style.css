@@ -125,4 +125,42 @@ button:hover {
     font-weight: bold;
     color: #333;
 }
+/* ==== To-Do List Styling ==== */
+input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    margin-top: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 10px auto;
+    padding: 10px;
+    width: 300px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+li button {
+    background-color: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 
