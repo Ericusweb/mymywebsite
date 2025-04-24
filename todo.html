@@ -14,38 +14,78 @@
     <ul id="taskList"></ul>
 
     <script>
-        function addTask() {
-            let taskInput = document.getElementById("taskInput");
-            let taskText = taskInput.value.trim();
+        <script>
+    // Load tasks from localStorage
+    window.onload = function () {
+        let saved = localStorage.getItem("tasks");
+        if (saved) {
+            document.getElementById("taskList").innerHTML = saved;
+            addEventsToTasks(); // reconnect delete and done actions
+        }
+    };
 
-            if (taskText === "") {
-                alert("Please enter a task.");
-                return;
-            }
+    function addTask() {
+        let taskInput = document.getElementById("taskInput");
+        let taskText = taskInput.value.trim();
 
-           let listItem = document.createElement("li");
-           listItem.textContent = taskText;
+        if (taskText === "") {
+            alert("Please enter a task.");
+            return;
+        }
 
-           // Mark as done when clicked
-           listItem.onclick = function () {
+        let listItem = document.createElement("li");
+        listItem.textContent = taskText;
+
+        // Mark as done
+        listItem.onclick = function () {
             listItem.classList.toggle("done");
-};
-;
+            saveTasks();
+        };
 
-            // Add a delete button
-            let deleteBtn = document.createElement("button");
-            deleteBtn.textContent = "❌";
-            deleteBtn.style.marginLeft = "10px";
-            deleteBtn.onclick = function () {
-                listItem.remove();
+        // Delete button
+        let deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "❌";
+        deleteBtn.style.marginLeft = "10px";
+        deleteBtn.onclick = function (event) {
+            event.stopPropagation();
+            listItem.remove();
+            saveTasks();
+        };
+
+        listItem.appendChild(deleteBtn);
+        document.getElementById("taskList").appendChild(listItem);
+        taskInput.value = "";
+
+        saveTasks();
+    }
+
+    function saveTasks() {
+        let listHTML = document.getElementById("taskList").innerHTML;
+        localStorage.setItem("tasks", listHTML);
+    }
+
+    function addEventsToTasks() {
+        let listItems = document.querySelectorAll("#taskList li");
+
+        listItems.forEach(function (item) {
+            // Mark as done
+            item.onclick = function () {
+                item.classList.toggle("done");
+                saveTasks();
             };
 
-            listItem.appendChild(deleteBtn);
-            document.getElementById("taskList").appendChild(listItem);
+            // Reconnect delete button
+            let deleteBtn = item.querySelector("button");
+            if (deleteBtn) {
+                deleteBtn.onclick = function (event) {
+                    event.stopPropagation();
+                    item.remove();
+                    saveTasks();
+                };
+            }
+        });
+    }
 
-            taskInput.value = "";
-        }
-    </script>
-
+   </script>
 </body>
 </html>
